@@ -1,0 +1,9 @@
+namespace db:
+ desc "Populating db"
+ task :populate => :environment
+  Route.populate(30) do |route|
+   route.number = 1..30
+   route.name = Populator.words(2)
+  end
+ end
+end

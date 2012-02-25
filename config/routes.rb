@@ -1,4 +1,6 @@
 Transport::Application.routes.draw do
+  resources :drivers
+
   resources :routes
 
   # The priority is based upon order of creation:
