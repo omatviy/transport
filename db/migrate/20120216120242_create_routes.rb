@@ -3,7 +3,7 @@ class CreateRoutes < ActiveRecord::Migration
     create_table :routes do |t|
       t.string :number
       t.string :name
-
+      t.integer :driver_id
       t.timestamps
     end
   end
