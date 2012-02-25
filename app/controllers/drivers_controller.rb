@@ -2,7 +2,7 @@ class DriversController < ApplicationController
   # GET /drivers
   # GET /drivers.xml
   def index
-    @drivers = Driver.all
+    @drivers = Driver.paginate(:page=>params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
