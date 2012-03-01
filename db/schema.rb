@@ -10,12 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225072044) do
+ActiveRecord::Schema.define(:version => 20120301115057) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.text     "desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "drivers", :force => true do |t|
     t.string   "name"
     t.string   "tel"
-    t.string   "category"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

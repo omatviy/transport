@@ -3,7 +3,7 @@ class CreateDrivers < ActiveRecord::Migration
     create_table :drivers do |t|
       t.string :name
       t.string :tel
-      t.string :category
+      t.integer :category_id
 
       t.timestamps
     end
