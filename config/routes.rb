@@ -1,4 +1,6 @@
 Transport::Application.routes.draw do
+  resources :categories
+
   resources :drivers
 
   resources :routes
