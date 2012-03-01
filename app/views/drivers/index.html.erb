@@ -1,10 +1,11 @@
-<h1>Listing drivers</h1>
 
-<table>
+<center><h1>Список водіїв</h1></center>
+<center><table>
   <tr>
-    <th>Name</th>
-    <th>Tel</th>
-    <th>Category</th>
+    <th>Ім'я</th>
+    <th>Номер телефону
+    <th>Категорія</th>
+    
     <th></th>
     <th></th>
     <th></th>
@@ -15,15 +16,18 @@
     <td><%= driver.name %></td>
     <td><%= driver.tel %></td>
     <td><%= driver.category %></td>
-    <td><%= link_to 'Show', driver %></td>
-    <td><%= link_to 'Edit', edit_driver_path(driver) %></td>
-    <td><%= link_to 'Destroy', driver, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Показати', driver %></td>
+    <td><%= link_to 'Редагувати', edit_driver_path(driver) %></td>
+    <td><%= link_to 'Знищити', driver, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Driver', new_driver_path %>
+
+<%= link_to 'Новий водій', new_driver_path %>
 <br />
 <%= will_paginate @drivers%>
+</center>
+</body>
