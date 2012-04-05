@@ -1,5 +1,6 @@
 namespace :db do
  desc "Populating db"
+ #require "populate"
  #Route.delete_all
  #Driver.delete_all
  

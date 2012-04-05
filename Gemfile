@@ -7,7 +7,7 @@ gem 'rails', '3.0.9'
 
 gem 'sqlite3'
 gem 'will_paginate'
-group :development, :test do
+group :development, :test, :production do
    gem 'populator'
    gem 'faker'
 end

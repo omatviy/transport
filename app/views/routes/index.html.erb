@@ -1,9 +1,10 @@
-<h1>Listing routes</h1>
+<center><h1>Список маршрутів</h1></center>
 
-<table>
+<center><table>
   <tr>
-    <th>Number</th>
-    <th>Name</th>
+    <th>Номер</th>
+    <th>Ім’я</th>
+    <th>Ім’я водія</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +14,15 @@
   <tr>
     <td><%= route.number %></td>
     <td><%= route.name %></td>
-    <td><%= link_to 'Show', route %></td>
-    <td><%= link_to 'Edit', edit_route_path(route) %></td>
-    <td><%= link_to 'Destroy', route, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= route.driver.name%></td>
+    <td><%= link_to 'Показати', route %></td>
+    <td><%= link_to 'Редагувати', edit_route_path(route) %></td>
+    <td><%= link_to 'Знищити', route, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
+<%=will_paginate @routes%>
 <%= link_to 'New Route', new_route_path %>
+</center>
