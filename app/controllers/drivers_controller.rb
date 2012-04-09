@@ -10,6 +10,9 @@ class DriversController < ApplicationController
     end
   end
 
+  def error
+  end
+  
   # GET /drivers/1
   # GET /drivers/1.xml
   def show
