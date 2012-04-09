@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>Ім'я:</b>
   <%= @driver.name %>
 </p>
 
 <p>
-  <b>Tel:</b>
+  <b>Телефон:</b>
   <%= @driver.tel %>
 </p>
 
 <p>
-  <b>Category:</b>
-  <%= @driver.category %>
+  <b>Категорія:</b>
+  <%= @driver.category.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_driver_path(@driver) %> |
-<%= link_to 'Back', drivers_path %>
+<%= link_to 'Редагувати', edit_driver_path(@driver) %> |
+<%= link_to 'Список водіїв', drivers_path %>

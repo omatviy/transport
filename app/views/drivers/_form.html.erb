@@ -20,10 +20,10 @@
     <%= f.text_field :tel %>
   </div>
   <div class="field">
-    <%= f.label :category, "Категорія"%><br />
-    <%= f.text_field :category %>
+    <%= f.label :category_id, "Категорія"%><br />
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
   </div>
   <div class="actions">
-    <%= f.submit "Створити"%>
+    <%= f.submit "Створити/Оновити"%>
   </div>
 <% end %>
